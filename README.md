@@ -1,8 +1,12 @@
 # Redux
-
+What is redux toolkit ?
+What is provider ?
+what is store ?
+what is action?
+what is reducer ?
 
 # Node sass
-
+what is diff b/w css and scss
 # Axios
  axios.create() => this will create a instance of axios
 
