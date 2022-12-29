@@ -4,6 +4,7 @@ What is provider ?
 what is store ?
 what is action?
 what is reducer ?
+what is dispatcher() ?
 
 # Node sass
 what is diff b/w css and scss
