@@ -2,16 +2,16 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import movieApi from '../../common/apis/movieApi'
 import {myApiKey} from '../../common/apis/movieApiKey'
 // asynchrnous action creator (using middleware thunk)
-export const fetchAsyncMovies = createAsyncThunk('movies/fetchAsyncMovies',  async () => {
-    const searchMovie = "Harry"
-    const response = await movieApi.get(`?apikey=${myApiKey}&s=${searchMovie}&type=movie`)
+export const fetchAsyncMovies = createAsyncThunk('movies/fetchAsyncMovies',  async (searchTerm) => {
+    
+    const response = await movieApi.get(`?apikey=${myApiKey}&s=${searchTerm}&type=movie`)
       return response.data;
 
 })
 
-export const fetchAsyncShows = createAsyncThunk('movies/fetchAsyncShows',  async () => {
+export const fetchAsyncShows = createAsyncThunk('movies/fetchAsyncShows',  async (searchTerm) => {
     const searchShows = "Friends"
-    const response = await movieApi.get(`?apikey=${myApiKey}&s=${searchShows}&type=series`)
+    const response = await movieApi.get(`?apikey=${myApiKey}&s=${searchTerm}&type=series`)
       return response.data;
 
 })
@@ -31,8 +31,8 @@ const movieSlice = createSlice({
     name: "movies",
     initialState,
     reducers: {
-        addMoives: (state, {payload}) => {
-            state.movies = payload;
+        removeSelectedMovieOrShow: (state) => {
+            state.selectedMovieOrShow = {}
         }
     },
     extraReducers: {
@@ -61,7 +61,7 @@ const movieSlice = createSlice({
     }
 })
 
-export const {addMoives} = movieSlice.actions;
+export const {removeSelectedMovieOrShow} = movieSlice.actions;
 export const getAllMovies = (state) => state.movies.movies
 export const getAllShows = (state) => state.movies.shows
 export const getMovieOrShowDetail = (state) => state.movies.selectedMovieOrShow

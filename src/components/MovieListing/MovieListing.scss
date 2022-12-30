@@ -7,8 +7,9 @@
         font-weight: 400;
     }
 }
-.movie-container, .show-container{
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    grid-gap:15px;
-}
+//styling will come from css link of slick
+// .movie-container, .show-container{
+//     display: grid;
+//     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+//     grid-gap:15px;
+// }
