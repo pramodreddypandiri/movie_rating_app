@@ -30,7 +30,9 @@ function Header() {
             </form>
         </div>
         <div className='user-image'>
-            <img src={user} alt='user'/>
+          <a href='https://github.com/pramodreddypandiri/movie_rating_app' target={'_blank'}>
+              <img src={user} alt='user'/>
+          </a>
         </div>
 
     </div>

@@ -17,13 +17,13 @@ function MovieListing() {
     movies.Search.map((movie, index) => (
       <MovieCard key={index} data={movie}/>
     ))
-  ) : (<div className="movies-error"><h3>{movies.Error}</h3></div>)
+  ) : (<div className="movies-error"><h3 className='error-message'>Sorry! Show/{movies.Error}</h3></div>)
   //make show cards
   renderShows = shows.Response === "True" ? (
     shows.Search.map((show, index) => (
       <MovieCard key={index} data={show}/>
     ))
-  ) : (<div className="movies-error"><h3>{movies.Error}</h3></div>)
+  ) : (<div className="movies-error"><h3 className='error-message'>Sorry! Show/{movies.Error}</h3></div>)
   return (
     //show movie cards in movielisting component
     <div className='movie-wrapper'>

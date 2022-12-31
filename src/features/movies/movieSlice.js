@@ -1,6 +1,7 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import movieApi from '../../common/apis/movieApi'
 import {myApiKey} from '../../common/apis/movieApiKey'
+
 // asynchrnous action creator (using middleware thunk)
 export const fetchAsyncMovies = createAsyncThunk('movies/fetchAsyncMovies',  async (searchTerm) => {
     
@@ -25,6 +26,7 @@ const initialState = {
     movies: {},
     shows: {},
     selectedMovieOrShow: {},
+    
 }
 
 const movieSlice = createSlice({
@@ -38,6 +40,7 @@ const movieSlice = createSlice({
     extraReducers: {
         [fetchAsyncMovies.pending]: () => {
             //console.log("Pending");
+            
         },
         [fetchAsyncMovies.fulfilled]: (state, {payload}) => {
             //console.log("fetched successfully")

@@ -18,7 +18,7 @@ function MovieDetail() {
   },[dispatch,imdbID])
   return (
     <div className='movie-section'>
-      {Object.keys(data).length === 0 ? (<div>Loading</div>) : (
+      {Object.keys(data).length === 0 ? (<div className='loading'>Loading</div>) : (
       <>
       
           <div className='section-left'>

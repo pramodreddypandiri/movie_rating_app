@@ -5,7 +5,7 @@ function Footer() {
   return (
     <div className='footer'>
       <div>Movie Rating App</div>
-      <div>©2021, Movie, Inc. or its affiliates</div>
+      <div>©2022, Movie, Inc. or its affiliates</div>
     </div>
   )
 }

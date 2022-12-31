@@ -1,5 +1,9 @@
 @import '../../common/colors.scss';
-
+.loading{
+    color: $font-secondary;
+    font-size: 30px;
+    font-weight: 400;
+}
 .movie-section{
     display: flex;
     justify-content: space-evenly;

@@ -1,9 +1,14 @@
 # Redux
 What is redux toolkit ?
+
 What is provider ?
+
 what is store ?
+
 what is action?
+
 what is reducer ?
+
 what is dispatcher() ?
 
 # Node sass
