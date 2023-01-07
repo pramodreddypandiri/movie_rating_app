@@ -3,7 +3,7 @@ import movieApi from '../../common/apis/movieApi'
 import {myApiKey} from '../../common/apis/movieApiKey'
 
 // asynchrnous action creator (using middleware thunk)
-export const fetchAsyncMovies = createAsyncThunk('movies/fetchAsyncMovies',  async (searchTerm) => {
+export const fetchAsyncMovies =  createAsyncThunk('movies/fetchAsyncMovies',  async (searchTerm) => {
     
     const response = await movieApi.get(`?apikey=${myApiKey}&s=${searchTerm}&type=movie`)
       return response.data;
